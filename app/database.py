@@ -1,7 +1,7 @@
 import sqlite3
 
 # either creates or connects to database
-connection = sqlite3.connect("notes.db")
+connection = sqlite3.connect("notes.db", check_same_thread=False)
 
 # for running SQL commands
 cursor = connection.cursor()
@@ -16,6 +16,7 @@ CREATE TABLE IF NOT EXISTS notes (
 )
 """)
 
+
 connection.commit()
-connection.close()
+# connection.close()
 

@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from . import database
-from routes import notes
+from app.routes import notes
 
 
 app = FastAPI()
